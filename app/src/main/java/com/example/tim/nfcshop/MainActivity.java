@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent = new Intent(getApplicationContext(), ShoppingCart.class);
-                        startService(intent);
+                        startActivity(intent);
                     }
                 }
         );
