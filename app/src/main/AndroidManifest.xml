@@ -3,7 +3,7 @@
           package="com.example.tim.nfcshop">
     <uses-permission android:name="android.permission.NFC"/>
     <uses-feature android:name="android.hardware.nfc"
-                  android:required="true"/>
+                  android:required="false"/>
 
     <application
             android:allowBackup="true"
