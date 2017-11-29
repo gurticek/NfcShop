@@ -21,12 +21,28 @@
         android:gravity="left|center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         />
-
-    <TextView
-        android:id="@+id/foodPrice"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/buyLabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:padding="8dp"
         />
+    <TextView
+        android:id="@+id/foodPrice"
+        android:textColor="#11AA11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:padding="8dp"
+        />
+    </LinearLayout>
 
 </LinearLayout>

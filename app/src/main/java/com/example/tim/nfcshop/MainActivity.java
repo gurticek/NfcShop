@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textViewInfo = (TextView)findViewById(R.id.info);
 
+
         nfcReader = new NfcReader(this);
 
         nfcReader.getNfc();
