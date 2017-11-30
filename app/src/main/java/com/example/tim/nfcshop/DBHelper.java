@@ -35,9 +35,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE IF NOT EXISTS" + CUSTOMERS_TABLE_NAME + "("+ CUSTOMERS_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String createTable = "CREATE TABLE IF NOT EXISTS " + CUSTOMERS_TABLE_NAME + "("+ CUSTOMERS_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 CUSTOMERS_COLUMN_NAME +" TEXT, "+ CUSTOMERS_COLUMN_CREDIT + " INTEGER, " + CUSTOMERS_COLUMN_ADMIN +" INTEGER" + ")";
-        String createTable2 = "CREATE TABLE IF NOT EXISTS" + PRODUCTS_TABLE_NAME + "(" + PRODUCTS_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String createTable2 = "CREATE TABLE IF NOT EXISTS " + PRODUCTS_TABLE_NAME + "(" + PRODUCTS_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 PRODUCTS_COLUMN_NAME +" TEXT, " + PRODUCTS_COLUMN_PRICE + " INTEGER, " + PRODUCTS_COLUMN_PICTURE + " INTEGER" + ")";
         db.execSQL(createTable);
         db.execSQL(createTable2);
