@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textViewInfo;
     private NfcReader nfcReader;
-
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +33,26 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
+        button = (Button) findViewById(R.id.MyButton);
+
+        // Capture button clicks
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(MainActivity.this,
+                        ActivityDatabase.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        nfcReader.enableNfc();
+ //       nfcReader.enableNfc();
     }
 
     @Override
@@ -48,6 +63,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        nfcReader.disableNFC();
+//        nfcReader.disableNFC();
     }
 }
